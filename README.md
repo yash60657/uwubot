@@ -1,5 +1,5 @@
 # UwU-fy
-Tuwn youw Discowd sewvew into a SUGOI UwU sewvew! Discord hack Week 2019 entry.
+Tuwn youw Discowd sewvew into a SUGOI UwU sewvew! Discord Hack Week 2019 entry.
 
 ## Setup
 * Install dependencies
@@ -20,4 +20,4 @@ To UwUfy a message outside of an UwU channel, just add an `uwu dis` before your 
 
 ## Don't want to setup? 
 Join [this server](https://discord.gg/x8Mr7Zb) and see it for yourself!
-You can also invite the bot on your own server through [here](https://discordapp.com/api/oauth2/authorize?client_id=594050328740102146&permissions=305152&scope=bot).
+You can also invite the bot on your own server through [here](https://discordapp.com/api/oauth2/authorize?client_id=594050328740102146&permissions=305152&scope=bot). (Do note that I might not be able to run this bot indefinitely)
