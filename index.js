@@ -12,6 +12,9 @@ client.on("ready", () => {
 });
 
 client.on("message", async (message) => {
+  if (!message.channel.guild || message.author.bot)
+    return;
+
   var text = message.content;
 
   if (text == `${prefix} ping`) {
@@ -24,7 +27,7 @@ client.on("message", async (message) => {
   var textSplit = text.split(" ");
   var uwuDis = textSplit[0] == prefix && textSplit[1] == "dis";
 
-  if (message.channel.guild && !message.author.bot && (message.channel.name.match(/uwu/i) || uwuDis)) {
+  if (message.channel.name.match(/uwu/i) || uwuDis) {
     
     var embed = new Discord.RichEmbed();
     embed.setAuthor(message.author.username, message.author.avatarURL);
