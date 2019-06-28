@@ -9,7 +9,7 @@ Tuwn youw Discowd sewvew into a SUGOI UwU sewvew! Discord Hack Week 2019 entry.
 * Run production
   * `npm run start`
 * Additional requirements
-  * The app requires a `DICORD_BOT_TOKEN` environment variable in order to work. This will depend on the patform you're deploying, but the simplest way to do this is to make a `.env` file. Inside the file, type `DISCORD_BOT_TOKEN=<token>` where `<token` is the token of your discord bot.
+  * The app requires a `DICORD_BOT_TOKEN` environment variable in order to work. This will depend on the patform you're deploying, but the simplest way to do this is to make a `.env` file. Inside the file, type `DISCORD_BOT_TOKEN=<token>` where `<token>` is the token of your discord bot.
  
 ## How To Use
 The bot needs __Manage Messages__ permission in order to work properly. 
