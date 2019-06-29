@@ -9,7 +9,38 @@ const prefix = "uwu";
 
 client.on("ready", () => {
   console.log("Bot Started");
+  randomizeActivity();
+  setInterval(randomizeActivity, 1000 * 60);
 });
+
+function randomizeActivity() {
+  var guilds = client.guilds.array();
+  var onlineCount = 0;
+
+  for (var i in guilds) {
+    var members = guilds[i].members;
+    var online = members.filter(m => {
+      return m.presence.status != "offline" && !m.user.bot;
+    }).size;
+    onlineCount += online;
+  }
+
+  const acts = [
+    "make their lives better",
+    "improving their lifestyle",
+    "promoting culture",
+    "being men of culture",
+    "embracing UwU",
+    "spreading the love",
+    "with nothing else to do",
+    "patting lolis",
+    "proteccting lolis"
+  ]
+
+  var randAct = acts[Math.floor(Math.random() * acts.length)];
+  var activity = `${onlineCount} degenerates ${randAct}`;
+  client.user.setActivity(activity, { type: "WATCHING" });
+}
 
 client.on("message", async (message) => {
   if (!message.channel.guild || message.author.bot)
