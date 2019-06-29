@@ -14,17 +14,6 @@ client.on("ready", () => {
 });
 
 function randomizeActivity() {
-  var guilds = client.guilds.array();
-  var onlineCount = 0;
-
-  for (var i in guilds) {
-    var members = guilds[i].members;
-    var online = members.filter(m => {
-      return m.presence.status != "offline" && !m.user.bot;
-    }).size;
-    onlineCount += online;
-  }
-
   const acts = [
     "make their lives better",
     "improving their lifestyle",
@@ -38,6 +27,7 @@ function randomizeActivity() {
   ]
 
   var randAct = acts[Math.floor(Math.random() * acts.length)];
+  var onlineCount = client.users.filter(u => { return u.presence.status != "offline" && !u.bot }).size;
   var activity = `${onlineCount} degenerates ${randAct}`;
   client.user.setActivity(activity, { type: "WATCHING" });
 }
