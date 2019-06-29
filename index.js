@@ -154,7 +154,7 @@ function uwufy(text) {
       ["＾ω＾", "（＾∀＾）", "≧ω≦", "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧", "	(≧◡≦)"]],
     [["sad", "unhappy", "depressed", "depressing", "depression", "miserable", "heartbroken", "broken-hearted"],
       ["╥﹏╥", "༼☯﹏☯༽", "(╥_╥)", "(⋟﹏⋞)", "༼ ༎ຶ ෴ ༎ຶ༽", "（>﹏<）", "（；＿；）"]],
-    [["angry", "angery", "mad", "annoyed", "annoying", "hate", "rage", "quit", "ragequit", "fuck", "shit", "bullshit", "motherfucker", "triggered"],
+    [["angry", "angery", "mad", "annoyed", "annoying", "hate", "rage", "quit", "ragequit", "fuck", "fucks", "fucked", "shit", "shitty", "shits", "bullshit", "motherfucker", "triggered"],
       ["ಠ_ಠ", "⋋_⋌", "ಠ▃ಠ", "(╬ಠ益ಠ)", "(¬_¬)", "（＞μ＜＃）", "凸ಠ益ಠ)凸", "(ノಠ益ಠ)ノ彡┻━┻"]],
     [["ez", "easy", "gg"],
       ["(⌐■_■)", "(ﾒ▼_▼)"]],
@@ -171,8 +171,7 @@ function uwufy(text) {
   const puntuations = [
     [".", "desu"],
     ["?", "ka"],
-    ["!", "DESU"],
-    ["~", "ne"]
+    ["!", "DESU"]
   ]
 
   const hahaThreshhold = 3;
