@@ -2,10 +2,17 @@
 require("dotenv").config();
 
 const Discord = require("discord.js");
+const DBL = require("dblapi.js");
 
 const client = new Discord.Client();
 const token = process.env.DISCORD_BOT_TOKEN;
 const prefix = "uwu";
+
+const dbl = new DBL(process.env.DBL_API_TOKEN, client);
+
+dbl.on("posted", () => {
+  console.log("Server count posted");
+})
 
 client.on("ready", () => {
   console.log("Bot Started");
@@ -258,10 +265,19 @@ function uwufy(text) {
   }
 
   // Finally, desu.
+  var toParse = text.match(/(?<=<)(.*)(?=>)/g);
+  for (var i in toParse) {
+    text = text.replace(`<${toParse[i]}>`, `<$${i}>`);
+  }
+
   for (var i in puntuations) {
     var symbol = puntuations[i][0];
     var replaceWith = puntuations[i][1];
     text = text.replace(new RegExp(`\\${symbol}`, "g"), ` ${replaceWith}${symbol}`);
+  }
+
+  for (var i in toParse) {
+    text = text.replace(`<$${i}>`, `<${toParse[i]}>`);
   }
 
   return text;
